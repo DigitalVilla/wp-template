@@ -1,0 +1,131 @@
+.projects {
+  min-height: 80vh;
+
+  &-slider {
+    height: 80%;
+    padding: 2rem 0;
+    background: $color-light;
+    position: relative;
+    @include flex(center, stretch, column);
+
+    &-container {
+      // border: 1px solid #00f;
+    }
+
+    .controls {
+      text-align: center;
+
+      &-buttons {
+        display: inline-block;
+        margin: 2rem auto;
+
+        &-switch {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          background: rgba(255, 255, 255, 0);
+          border-radius: 50%;
+          margin: 0 0.75em;
+          cursor: pointer;
+          box-shadow: 0 0 0 0.25em rgba(0, 0, 0, 0.15);
+          -webkit-transition: 0.15s all linear;
+          -moz-transition: 0.15s all linear;
+          -o-transition: 0.15s all linear;
+          transition: 0.15s all linear;
+
+          &:hover {
+            background: #808080;
+          }
+        }
+      }
+    }
+  }
+
+  &-card {
+
+    &-laptop {
+      width: 75rem !important;
+    }
+
+    @include container;
+    padding: 0 4rem;
+    //   height: 43rem;
+    //   width: 90%;
+    @include flex(center);
+    //   margin: auto;
+    //   border-radius: 1rem;
+    // border: 1px solid #00f;
+
+    &-text {
+      height: 40%;
+      @include flex(space-between, baseline, column);
+
+      .subtitle {
+        font-size: 2rem;
+      }
+
+      .title-black {
+        font-size: 2.5rem;
+        text-transform: capitalize;
+      }
+
+      .black-btn {
+        padding: .8rem 6rem;
+      }
+    }
+  }
+
+  @include media (iniPad) {
+    &-card {
+      &-laptop {
+        width: 55rem;
+      }
+    }
+
+  }
+
+  @include media (inTablet) {
+    &-slider {
+      background: none;
+
+      .controls {
+        display: none;
+      }
+    }
+
+    &-card {
+      flex-direction: column;
+
+      align-items: center;
+
+      &-laptop {
+        max-width: 70vw;
+      }
+
+      &-text {
+        // border: 1px solid #00f;;;
+        order: 2;
+
+        align-items: center;
+
+        .subtitle,
+        .title-black {
+          margin-bottom: 2rem;
+        }
+
+      }
+    }
+  }
+
+  @include media (inPhone) {
+    &-card {
+      flex-direction: column;
+
+      align-items: center;
+
+      &-laptop {
+        max-width: 80vw;
+      }
+    }
+  }
+}

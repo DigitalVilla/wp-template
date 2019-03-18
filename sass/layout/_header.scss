@@ -1,0 +1,77 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  @include container; // limit with of content
+
+  &-banner-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem;
+    overflow: hidden;
+    max-width: $max-width;
+
+    & video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-text-container {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+    padding-right: 6rem;
+    width: 100%;
+
+    &-img {
+      display: none;
+    }
+
+    &-title {
+      text-align: right;
+
+      @include media (inPhone) {
+        font-size: 2.7rem !important;
+      }
+    }
+
+    &-button {
+      float: right;
+    }
+  }
+
+  @include media (inTablet) {
+    background: #fdfdfc !important;
+    // border: 1px solid #00f;
+
+    &-banner-container {
+      display: none;
+    }
+
+    &-text-container {
+      padding-right: 0;
+      text-align: center;
+
+      &-img {
+        margin: auto;
+        display: block;
+        width: 27rem;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+
+      &-title {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      &-button {
+        float: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.transform {
+  height: 100vw;
+  max-height: 55rem;
+  min-height: 40rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include flex(space-around, center, column);
+
+  &-title {}
+
+  &-svg {
+    height: auto;
+    width: 30rem;
+  }
+
+  @include media (inPhone) {
+    &-svg {
+      width: 20rem;
+      height: 10rem;
+    }
+  }
+}

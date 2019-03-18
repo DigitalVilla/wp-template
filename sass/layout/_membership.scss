@@ -1,0 +1,25 @@
+.membership {
+
+  &-container {
+     padding: 4rem !important;
+
+   max-width: $tablet;
+  }
+
+  &-badge {
+    width: auto;
+    height: 11rem;
+    margin: 2rem 0;
+    margin-bottom: 6rem !important;
+
+    &:first-of-type {
+      height: 9rem;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.cardV1 {
+  height: 30rem;
+  max-width: 40rem;
+  background: $color-light;
+  border-radius: 1rem;
+
+  @include on-event () {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1) !important;
+  }
+}

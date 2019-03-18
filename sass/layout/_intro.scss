@@ -1,0 +1,100 @@
+.intro {
+  min-height: 60vh;
+
+  &-container {
+    @include container;
+  }
+
+
+  &-banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+    &-title {
+      @include abs-center;
+      text-transform: initial;
+      white-space: nowrap;
+      transition: all .2s;
+
+      @include media (1200px) {
+        font-size: 4.5rem;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+
+  &-text-container {
+  }
+
+  &-text {
+    // @include vertical-align;
+    @include flex(center, baseline, column);
+    transition: none;
+
+    &-title {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    &-info {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+  }
+
+  [class*="col-"] {
+    height: 100%;
+
+    &:last-child {
+      padding: 2rem;
+    }
+  }
+
+  @include media (inTablet) {
+    background-image: url('assets/design/mobility-quotient-rocky-mountains-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 14rem !important;
+
+    &-text {
+      background: #fff;
+      box-shadow: 0 0 3.2rem 3.2rem #fff;
+      align-items: center;
+      padding-top: 2rem;
+
+      &-title {
+        font-size: 1.8rem;
+      }
+
+      &-info {
+        font-size: 1.6rem;
+      }
+
+      &-info,
+      &-title {
+        padding: 0 2rem;
+      }
+    }
+
+
+    &-banner {
+      display: none !important;
+    }
+
+    [class*="col-"] {
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+
+}

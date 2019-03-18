@@ -1,0 +1,67 @@
+.navbar {
+  background-image: linear-gradient(to right, transparent 0%, rgb(255, 255, 255) 50%, transparent 100%);
+  // border: 1px solid #00f;
+  width: 100vw;
+
+  z-index: 200;
+  position: fixed;
+  height: 5rem;
+  top: 0;
+
+
+  &-nav {
+    height: 100%;
+    margin: auto;
+    min-width: $phone;
+    max-width: $max-width;
+    width: 100vw;
+    padding: 0 2rem;
+    // border: 1px solid #00f;
+    @include flex (space-between);
+
+    &-logo {
+      // flex-grow: 1;
+      // height: 100%;
+
+      &-img {
+        height: 40%;
+        width: auto;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-list {
+      height: 100%;
+      @include flex (space-between);
+
+      &-item {
+        display: none;
+        list-style: none;
+        padding-right: 1rem;
+        // border: 1px solid #00f;
+        & a {
+         text-transform: uppercase;
+         font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  @include media(tablet) {
+    padding: 0 2rem;
+    // width: 100%;
+    position: absolute;
+    z-index: 200;
+    height: 7.5rem;
+    top: 6rem;
+
+    &-nav {
+      &-list {
+        &-item {
+          display: block;
+
+        }
+      }
+    }
+  }
+}

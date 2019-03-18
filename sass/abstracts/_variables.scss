@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+$text-font: 'Open Sans',
+'Helvetica Neue Light',
+'Helvetica Neue',
+'Helvetica',
+'Arial',
+sans-serif !default;
+
+/// Code (monospace) font family
+$code-fontk: 'Courier New',
+'DejaVu Sans Mono',
+'Bitstream Vera Sans Mono',
+'Monaco',
+monospace !default;
+
+$color-dark: #596164 !default;
+$color-black: #231f20 !default;
+$color-light: #eee !default;
+$color-success: #59d65f !default;
+$color-info: rgb(84, 162, 201) !default;
+$color-danger: #ff1058 !default;
+$color-brand: #ce2d83 !default;
+
+
+// RESPONSIVE BREAKPOINTS
+$phone: 319px;
+$tablet: 767px; // tablet
+$ipad: 1024px; // iPad Pro
+$laptop: 1366px; // laptop
+$desktopHD: 1918px; // desktop
+
+
+$max-width: 1200px;
+$max-widthL: 1460px;
+$max-widthXL: 1860px;

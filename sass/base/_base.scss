@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+*,
+::after,
+::before {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5% !important;
+  @include media(desktop) {
+    font-size: 87.5% !important;
+  }
+}
+
+
+main,
+header,
+section {
+  width: 100% !important;
+  padding-top: 2rem !important;
+  margin-bottom: 2rem !important;
+
+  // border: 1px solid #00f;
+
+  @include media (inLaptop) {
+    margin-bottom: 1rem !important;
+  }
+   @include media (desktop) {
+    padding-top: 5rem !important;
+  margin-bottom: 5rem !important;
+  }
+}
+
+// *:focus {
+//   outline: none !important;
+// }
+
+// button::-moz-focus-inner {
+//   border: 0;
+// }
+
+.noSelect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+// ::selection {
+//     background: #e5eff1;
+//     /* WebKit/Blink Browsers */
+//     color: $color-primary;
+// }
+
+// ::-moz-selection {
+//     background: #ebebeb;
+//     /* Gecko Browsers */
+//     color: $color-primary;
+// }
+
+// button:focus,
+// button:active {
+//     outline: none !important;
+//     outline: 0 !important;
+// }
+
+// button::-moz-focus-inner {
+//     border: 0;
+// }
+
+// // input::placeholder {
+// //     color: rgb(182, 36, 158);
+// //     opacity: .5;
+// // }
+
+// input::-moz-focus-inner {
+//     border: 0;
+//     border: none;
+// }

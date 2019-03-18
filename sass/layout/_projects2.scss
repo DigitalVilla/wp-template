@@ -1,0 +1,69 @@
+.projects2 {
+  min-height: 60vh;
+  padding-bottom: 2rem;
+  @include container;
+
+  &-card {
+    padding: 3rem;
+    padding-top: 2rem;
+    height: 100% !important;
+    max-width: 550px !important;
+    width: 50vw !important;
+
+    &-text {
+      margin-bottom: 3rem;
+    }
+
+  }
+
+  .crd1,
+  .crd2 {
+    margin: auto;
+  }
+
+  .crd1 {
+    margin-bottom: 2rem;
+  }
+
+  &-button {
+    text-align: center;
+  }
+
+  @include media (1200px) {
+    &-card {
+      width: 45vw !important;
+    }
+  }
+
+  @include media (inTablet) {
+    &-card {
+       width: 80vw !important;
+    }
+  }
+
+  @include media (tablet) {
+
+    .crd1,
+    .crd2 {
+      margin: 0;
+    }
+
+    .crd1 {
+      margin-left: auto !important;
+    }
+
+    .crd2 {
+      margin-right: auto !important;
+    }
+
+    &-button {
+      margin-top: 2rem;
+      text-align: center;
+
+      &-btn {
+        padding: 1.2rem 4rem !important;
+      }
+    }
+  }
+
+}

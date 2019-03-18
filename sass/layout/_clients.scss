@@ -1,0 +1,51 @@
+.clients {
+  min-height: 60vh;
+  @include container;
+
+  &-title {
+    margin-bottom: 2rem;
+  }
+
+  &-container {
+    @include flex(center, center);
+    flex-wrap: wrap;
+
+    &-img {
+      opacity: 0.8;
+      text-align: center;
+      min-width: 16rem;
+      width: calc(100% / 5);
+      margin-bottom: 2rem;
+
+
+      @include media (1200px) {
+        width: calc(100% / 4);
+      }
+
+      @include media (iniPad) {
+        width: calc(100% / 3);
+      }
+
+      @include media (inTablet) {
+        width: calc(100% / 2);
+      }
+
+      // @include media (inPhone) {
+      //   width: calc(100% / 2);
+      // }
+
+      img {
+        // width: 100%;
+        width: 16rem;
+        height: 100%;
+      }
+
+    }
+  }
+
+  .image {
+    // height: 9rem;
+    // border: 1px solid #00f;
+  }
+
+}

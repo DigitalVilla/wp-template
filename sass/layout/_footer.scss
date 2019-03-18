@@ -1,0 +1,94 @@
+.footer {
+  background: rgb(51, 51, 51);
+  color: $color-light;
+  background-size: cover;
+  padding-top: 5rem;
+
+  &-container {
+    @include container;
+  }
+
+  &-navbar {
+    margin-bottom: 20rem !important;
+    // padding-top: 4rem;
+
+    &-brand {
+      height: 5rem !important;
+      text-align: center;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    &-links {
+      height: 100%;
+      padding-left: 2rem;
+      @include flex(space-around);
+
+      a {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-contact {
+    margin-top: 3rem !important;
+
+    &-info {
+      text-align: center;
+
+      &-text {
+        display: inline-block;
+        width: 20rem;
+        text-align: left;
+        margin-bottom: 3rem !important;
+        margin-left: auto !important;
+      }
+    }
+  }
+
+  &-social-icons {
+    display: none;
+
+    &-container {
+      text-align: center;
+    }
+  }
+
+  .social-icon {
+    height: 3rem;
+  }
+
+
+  &-bottom-bar {
+    background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.125) 50%, transparent 100%);
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &-link {
+    text-align: center;
+    display: none;
+      font-weight: 700;
+      margin-bottom: 3rem !important;
+  }
+
+  @include media(inTablet) {
+    &-link {
+      display: block;
+    }
+
+    &-navbar {
+      &-links {
+        display: none;
+      }
+    }
+
+    &-social-icons {
+      display: block;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.black-btn {
+  background: #231f20;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4rem;
+  padding: 1rem 3rem;
+  box-shadow: 0 0.5rem .7rem 0em rgba(0, 0, 0, 0.2);
+  transition: all .2s;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  user-select: none;
+  text-transform: capitalize;
+  position: relative;
+
+  @include on-event() {
+    background: $color-brand;
+    transform: translateY(-.2rem);
+  }
+}
