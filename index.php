@@ -5,7 +5,7 @@
 
     <header class="hero">
         <div class="hero-banner-container">
-            <video loop autoplay class="hero-video noSelect">
+            <video autoplay muted loop class="hero-video noSelect">
                 <source src="<?php echo get_theme_file_uri('/assets/media/hero_mask_compressed.webm') ?>" type="video/webm">
                 <source src="<?php echo get_theme_file_uri('/assets/media/hero_mask_compressed_h264.mp4') ?>" type="video/mp4">
             </video>
