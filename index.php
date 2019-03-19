@@ -150,6 +150,12 @@
     </section>
 
     <section class="comments">
+       <div class="row">
+
+           <p>
+               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, cum.
+           </p>
+       </div>
     </section>
 
     <section class="clients">

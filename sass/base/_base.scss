@@ -30,7 +30,7 @@ section {
   // border: 1px solid #00f;
 
   @include media (inLaptop) {
-    margin-bottom: 1rem !important;
+    margin-bottom: 2rem !important;
   }
    @include media (desktop) {
     padding-top: 5rem !important;

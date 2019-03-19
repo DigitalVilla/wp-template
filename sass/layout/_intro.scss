@@ -1,8 +1,14 @@
 .intro {
   min-height: 60vh;
+  position: relative;
+
 
   &-container {
     @include container;
+
+    @include media (tablet) {
+     @include flex(center);
+    }
   }
 
 
@@ -30,12 +36,7 @@
     }
   }
 
-
-  &-text-container {
-  }
-
   &-text {
-    // @include vertical-align;
     @include flex(center, baseline, column);
     transition: none;
 

@@ -37,7 +37,7 @@
 
   @include media (inTablet) {
     &-card {
-       width: 80vw !important;
+      width: 80vw !important;
     }
   }
 
@@ -63,6 +63,15 @@
       &-btn {
         padding: 1.2rem 4rem !important;
       }
+    }
+  }
+
+  @include media (inPhone) {
+
+    .crd1,
+    .crd2 {
+      width: 95% !important;
+      padding: 1rem !important;
     }
   }
 
