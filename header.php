@@ -3,11 +3,6 @@
 
 <head>
     <?php wp_head(); ?>
-    <style>
-        /* html {
-            margin: 0 !important;
-        } */
-    </style>
 </head>
 
 <body>

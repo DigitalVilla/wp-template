@@ -15,7 +15,8 @@ html {
   box-sizing: border-box;
   font-size: 62.5% !important;
   @include media(desktop) {
-    font-size: 87.5% !important;
+    // font-size: 87.5% !important;
+    font-size: 75% !important;
   }
 }
 
