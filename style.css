@@ -57,6 +57,12 @@ html {
   @media only screen and (max-width: desktop) {
     html {
       font-size: 75% !important; } }
+  @media only screen and (min-width: 2560px) {
+    html {
+      font-size: 87.5% !important; } }
+  @media only screen and (max-width: ultraHD) {
+    html {
+      font-size: 87.5% !important; } }
 
 main,
 header,
@@ -329,11 +335,12 @@ body {
   min-width: 319px !important;
   width: 100% !important;
   height: 100% !important;
-  flex-direction: column;
-  justify-content: center;
   padding: 0 0;
   position: relative;
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
 
 .row {
   width: 100%;
@@ -585,7 +592,7 @@ body {
 .projects {
   min-height: 60vh; }
   .projects-slider {
-    height: 90%;
+    height: 75%;
     padding: 2rem 0;
     background: #eee;
     position: relative;

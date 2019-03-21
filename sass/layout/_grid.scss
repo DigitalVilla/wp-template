@@ -15,11 +15,12 @@ $gutter-horizontal: 2rem; // fields in between space
   min-width: $phone !important;
   width: 100% !important;
   height: 100% !important;
-  flex-direction: column;
-  justify-content: center;
   padding: 0 $grid-pad;
   position: relative;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .row {

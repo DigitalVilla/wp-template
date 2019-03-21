@@ -158,7 +158,7 @@
        </div>
     </section>
 
-    <section class="clients">
+    <section class="clients grid">
         <h2 class="clients-title hero-tileV1">Select Clients</h2>
 
         <div class="clients-container">
