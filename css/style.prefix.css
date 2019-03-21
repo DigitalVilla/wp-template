@@ -274,7 +274,7 @@ body {
        object-fit: contain; }
 
 .clients {
-  min-height: 60vh;
+  min-height: 80vh;
   max-width: 1200px;
   margin: auto; }
   @media only screen and (min-width: 1918px) {
@@ -549,7 +549,7 @@ body {
           float: none; } }
 
 .intro {
-  min-height: 60vh; }
+  min-height: 80vh; }
   .intro-container {
     max-width: 1200px;
     margin: auto; }
@@ -861,7 +861,7 @@ body {
         max-width: 80vw; } }
 
 .projects2 {
-  min-height: 60vh;
+  min-height: 80vh;
   padding-bottom: 2rem;
   max-width: 1200px;
   margin: auto; }
@@ -923,7 +923,7 @@ body {
         padding: 1.2rem 4rem !important; } }
 
 .service {
-  min-height: 60vh;
+  min-height: 80vh;
   max-width: 1200px;
   margin: auto; }
   @media only screen and (min-width: 1918px) {

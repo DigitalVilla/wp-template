@@ -1,4 +1,4 @@
-const swiper = () => {
+export const swiper = () => {
 
   var swiper1075 = $('.swiper-container-work').swiper({
     autoplay: 8000,
@@ -25,4 +25,3 @@ const swiper = () => {
     swiper1075.swipePrev();
   });
 };
-console.log(swiper);
