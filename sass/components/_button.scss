@@ -9,16 +9,21 @@
   border-radius: 4rem;
   padding: 1rem 3rem;
   box-shadow: 0 0.5rem .7rem 0em rgba(0, 0, 0, 0.2);
-  transition: all .2s;
   margin: 1rem 0;
   font-size: 1.5rem;
   font-weight: 600;
   user-select: none;
   text-transform: capitalize;
   position: relative;
+  transition: all .2s !important;
 
-  @include on-event() {
-    background: linear-gradient(to right top, $color-brand2, $color-brand3);
-    transform: translateY(-.2rem);
+  &:hover,
+  &:active {
+    background-image: linear-gradient(to right top, $color-brand2, $color-brand3);
+    transform: translateY(-.1rem);
+  }
+
+  &:active {
+    transform: translateY(.1rem);
   }
 }

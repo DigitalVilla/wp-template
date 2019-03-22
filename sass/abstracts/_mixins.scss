@@ -18,8 +18,7 @@
   @else {
 
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       @content;
     }
   }
