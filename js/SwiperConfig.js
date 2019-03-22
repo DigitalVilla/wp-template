@@ -1,10 +1,9 @@
-export const options = (bulletId) => {
+export const options = (bulletId, effect ) => {
   return {
+    effect,
     init: true,
-    // initialSlide: 2,
     // direction: 'vertical',
     speed: 600,
-    // effect:'coverflow',
     loop: true,
     resistance: false,
     grabCursor: true,

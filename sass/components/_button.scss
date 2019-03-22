@@ -18,7 +18,8 @@
   position: relative;
 
   @include on-event() {
-    background: $color-brand;
+
+    background: linear-gradient(to right top, $color-brand2, $color-brand3);
     transform: translateY(-.2rem);
   }
 }

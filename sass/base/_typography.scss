@@ -11,8 +11,6 @@ body {
   font-size: 1.6rem;
 }
 
-
-
 @mixin title {
   font-size: 6.5rem;
   color: #fff;
@@ -81,8 +79,48 @@ body {
 }
 
 .title-black {
-text-transform: uppercase;
+  text-transform: uppercase;
   color: $color-black;
   font-size: 2rem;
   font-weight: bold;
+}
+
+@mixin Quote {
+  margin: 0 auto;
+  padding-left: 19.5px;
+  padding-right: 19.5px;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.Quote-V1 {
+  @include Quote;
+  font-size: 3rem;
+  font-weight: 700;
+
+  @include media (inTablet) {
+    font-size: 2.5rem;
+  }
+
+  @include media (inPhone) {
+    font-size: 2rem;
+  }
+}
+
+.Quote-V2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  @include Quote;
+  font-size: 2.5rem;
+
+  @include media (inTablet) {
+    font-size: 2rem;
+  }
+
+  @include media (inPhone) {
+    font-size: 1.6rem;
+  }
 }

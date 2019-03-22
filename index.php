@@ -2,7 +2,6 @@
 
 <div class="container">
 
-
     <header class="hero">
         <div class="hero-banner-container">
             <video autoplay muted loop class="hero-video noSelect">
@@ -15,7 +14,7 @@
             <h1 class="hero-text-container-title title-main">
                 Your Full-Service<br>
                 Digital Agency </h1>
-            <button class="black-btn hero-text-container-button"> Services we offer</button>
+            <button class="black-btn hero-text-container-button">Services we offer</button>
         </div>
     </header>
 
@@ -53,25 +52,25 @@
                     $proj[2] = array('img' => 'web-news.jpg', 'title' => 'Hyper-Local News Publisher', 'subtitle' => 'Patch.com', 'link' => '#');
 
                     for ($i = 0; $i < count($proj); $i++) {
-                      echo '<div class="swiper-slide">';
-                      echo '<div class="col-1x1-md">';
-                      echo '<div class="work-card ">';
-                      echo '<div class="work-card-text noSelect col-2x5">';
-                      echo '<h6 class="subtitle">' . $proj[$i]['subtitle'] . '</h6>';
-                      echo '<h3 class="title-black">' . $proj[$i]['title'] . '</h3>';
-                      echo '<a class="black-btn" href="' . $proj[$i]['link'] . '">View More</a>';
-                      echo '</div>';
-                      echo '<div class="work-card-laptop col-3x5 laptop">';
-                      echo '<div class="laptop-top">';
-                      echo '<div class="laptop-top-screen"';
-                      echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj[$i]['img']) . ');">';
-                      echo '</div>';
-                      echo '</div>';
-                      echo '<div class="laptop-bottom"></div>';
-                      echo '</div>';
-                      echo '</div>';
-                      echo '</div>';
-                      echo '</div>';
+                        echo '<div class="swiper-slide">';
+                        echo '<div class="col-1x1-md">';
+                        echo '<div class="work-card ">';
+                        echo '<div class="work-card-text noSelect col-2x5">';
+                        echo '<h6 class="subtitle">' . $proj[$i]['subtitle'] . '</h6>';
+                        echo '<h3 class="title-black">' . $proj[$i]['title'] . '</h3>';
+                        echo '<a class="black-btn" href="' . $proj[$i]['link'] . '">View More</a>';
+                        echo '</div>';
+                        echo '<div class="work-card-laptop col-3x5 laptop">';
+                        echo '<div class="laptop-top">';
+                        echo '<div class="laptop-top-screen"';
+                        echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj[$i]['img']) . ');">';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<div class="laptop-bottom"></div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
                     }
                     ?>
                 </div> <!-- .swiper-wrapper -->
@@ -92,22 +91,22 @@
             $proj2[1] = array('img' => 'pro-xtime-cover.jpg', 'title' => 'XTIME', 'subtitle' => 'Customer Relationship Manager', 'link' => '#');
 
             for ($i = 0; $i < count($proj2); $i++) {
-              echo '<div class="col-1x2-md">';
-              echo '<div class="projects-card ' . ($i == 0 ? 'crd1' : 'crd2') . ' cardV1">';
-              echo '<div class="projects-card-text">';
-              echo '<h6 class="subtitle">' . $proj2[$i]['subtitle'] . '</h6>';
-              echo '<a class="title-black" href="' . $proj2[$i]['link'] . '">' . $proj2[$i]['title'] . '</a>';
-              echo '</div>';
-              echo '<div class="projects-card-laptop laptop">';
-              echo '<div class="laptop-top">';
-              echo '<div class="laptop-top-screen"';
-              echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj2[$i]['img']) . ');">';
-              echo '</div>';
-              echo '</div>';
-              echo '<div class="laptop-bottom"></div>';
-              echo '</div>';
-              echo '</div>';
-              echo '</div>';
+                echo '<div class="col-1x2-md">';
+                echo '<div class="projects-card ' . ($i == 0 ? 'crd1' : 'crd2') . ' cardV1">';
+                echo '<div class="projects-card-text">';
+                echo '<h6 class="subtitle">' . $proj2[$i]['subtitle'] . '</h6>';
+                echo '<a class="title-black" href="' . $proj2[$i]['link'] . '">' . $proj2[$i]['title'] . '</a>';
+                echo '</div>';
+                echo '<div class="projects-card-laptop laptop">';
+                echo '<div class="laptop-top">';
+                echo '<div class="laptop-top-screen"';
+                echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj2[$i]['img']) . ');">';
+                echo '</div>';
+                echo '</div>';
+                echo '<div class="laptop-bottom"></div>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
             }
             ?>
         </div>
@@ -130,24 +129,24 @@
                 $services[3] = array('svg' => 'Strategic-icon.svg', 'title' => 'Strategic consulting', 'content' => 'Project audits, planning & management', 'button' => 'view options');
 
                 for ($i = 0; $i < count($services); $i++) {
-                  if ($i % 2 == 0) {
-                    echo '<div class="col-1x2-lg service-section">';
-                  }
-                  echo '<div class= "col-1x2-sm">';
-                  echo '<div class="service-card  cardV1">';
-                  echo '<img  class="service-card-img" src="' .
-                    get_theme_file_uri("/assets/svg/" . $services[$i]['svg']) .
-                    '"height width alt="' . $services[$i]['title'] . ' icon">';
-                  echo '<h4 class="service-card-title">' . $services[$i]['title'] . '</h4>';
-                  echo '<p class="service-card-text">' . $services[$i]['content'] . '</p>';
-                  echo "</div>";
-                  echo '<div class="service-card-buttonn">';
-                  echo '<button class="black-btn">' . $services[$i]['button'] . '</button>';
-                  echo "</div>";
-                  echo "</div>";
-                  if ($i % 2 == 1) {
-                    echo '</div>';
-                  }
+                    if ($i % 2 == 0) {
+                        echo '<div class="col-1x2-lg service-section">';
+                    }
+                    echo '<div class= "col-1x2-sm">';
+                    echo '<div class="service-card  cardV1">';
+                    echo '<img  class="service-card-img" src="' .
+                        get_theme_file_uri("/assets/svg/" . $services[$i]['svg']) .
+                        '"height width alt="' . $services[$i]['title'] . ' icon">';
+                    echo '<h4 class="service-card-title">' . $services[$i]['title'] . '</h4>';
+                    echo '<p class="service-card-text">' . $services[$i]['content'] . '</p>';
+                    echo "</div>";
+                    echo '<div class="service-card-buttonn">';
+                    echo '<button class="black-btn">' . $services[$i]['button'] . '</button>';
+                    echo "</div>";
+                    echo "</div>";
+                    if ($i % 2 == 1) {
+                        echo '</div>';
+                    }
                 }
                 ?>
             </div>
@@ -160,40 +159,51 @@
                 <div class="swiper-wrapper">
                     <?php
                     $comments[0] = array(
-                      'img' => 'Aol.png', 'title' => 'Tim Armstrong', 'subtitle' => 'CEO',
-                      'comment' => 'Excerpt from the Wallstreet Journal regarding the Patch.com rebuild: "They\'ve been excellent operators and innovated and rebuilt the platform", Mr. Armstrong said, adding, "The local marketplace remains a big opportunity. AOL is supportive of Patch and it\'s something we are excited about."'
+                        'img' => 'HaleGlobal.png', 'title' => 'Bruce Hill', 'subtitle' => 'Managing Partner',
+                        'comment' => 'Nick personally led the project, including managing the interaction with the customer, a large multinational petrochemical company.  This resulted in a unique value-added solution, driving a multi-million dollar long-term contract that secured the business through the end of the decade.  It is this ability not only to execute the project, but to define and refine the elements that create real ROI for the customer, that sets Mobility Quotient apart.'
                     );
-                    $comments[0] = array(
-                      'img' => 'Aol.png', 'title' => 'Tim Armstrong', 'subtitle' => 'CEO',
-                      'comment' => 'Excerpt from the Wallstreet Journal regarding the Patch.com rebuild: "They\'ve been excellent operators and innovated and rebuilt the platform", Mr. Armstrong said, adding, "The local marketplace remains a big opportunity. AOL is supportive of Patch and it\'s something we are excited about."'
+                    $comments[1] = array(
+                        'img' => 'winsight.png', 'title' => 'Tara Tesimu', 'subtitle' => 'Chief Digital Officer',
+                        'comment' => 'Restaurant Business Online just won BEST WEBSITE at the 2018 Neal Awards (big in B2B); this is huge!!! MQ’s contributions were instrumental in building this website — I would put it up against any site out there, big players or small!'
                     );
-                    $comments[0] = array(
-                      'img' => 'Aol.png', 'title' => 'Tim Armstrong', 'subtitle' => 'CEO',
-                      'comment' => 'Excerpt from the Wallstreet Journal regarding the Patch.com rebuild: "They\'ve been excellent operators and innovated and rebuilt the platform", Mr. Armstrong said, adding, "The local marketplace remains a big opportunity. AOL is supportive of Patch and it\'s something we are excited about."'
+                    $comments[2] = array(
+                        'img' => 'Aol.png', 'title' => 'Tim Armstrong', 'subtitle' => 'CEO',
+                        'comment' => 'Excerpt from the Wallstreet Journal regarding the Patch.com rebuild: "They\'ve been excellent operators and innovated and rebuilt the platform", Mr. Armstrong said, adding, "The local marketplace remains a big opportunity. AOL is supportive of Patch and it\'s something we are excited about."'
                     );
-                    $comments[0] = array(
-                      'img' => 'Aol.png', 'title' => 'Tim Armstrong', 'subtitle' => 'CEO',
-                      'comment' => 'Excerpt from the Wallstreet Journal regarding the Patch.com rebuild: "They\'ve been excellent operators and innovated and rebuilt the platform", Mr. Armstrong said, adding, "The local marketplace remains a big opportunity. AOL is supportive of Patch and it\'s something we are excited about."'
+                    $comments[3] = array(
+                        'img' => 'patch.png', 'title' => 'VP Productions', 'subtitle' => '',
+                        'comment' => 'I am having so much fun working on this project with MQ. It’s really really exciting to get to take a concept I’ve had for years and watch a team with so much talent and passion bring it to life. Honestly. The time of my life.'
                     );
 
                     for ($i = 0; $i < count($comments); $i++) {
-                      echo '<div class= "col-1x2-sm">';
-                      echo '<div class="service-card  cardV1">';
-                      echo '<img  class="service-card-img" src="' .
-                        get_theme_file_uri("/assets/svg/" . $comments[$i]['svg']) .
-                        '"height width alt="' . $comments[$i]['title'] . ' icon">';
-                      echo '<h4 class="service-card-title">' . $comments[$i]['title'] . '</h4>';
-                      echo '<p class="service-card-text">' . $comments[$i]['comment'] . '</p>';
-                      echo "</div>";
-                      echo '<div class="service-card-buttonn">';
-                      echo '<button class="black-btn">' . $comments[$i]['button'] . '</button>';
-                      echo "</div>";
-                      echo "</div>";
+                        echo '<div class="swiper-slide noSelect">';
+                        echo '<div class="row quote-content">';
+                        echo '<div class="quote-content-tag quote-left col-1x6"></div>';
+                        echo '<div class="quote-content-text col-4x6-md ">';
+                        echo '<blockquote class="quote-content-text-quote Quote-V2">' . $comments[$i]['comment'] . '</blockquote>';
+                        echo '</div>';
+                        echo '<div class="quote-content-tag quote-right col-1x6"></div>';
+                        echo '</div>';
+
+                        echo '<div class="row quote-by">';
+                        echo '<div class="quote-by-logo col-1x1">';
+                        echo '<img  class="quote-tag-img" src="' .
+                            get_theme_file_uri("/assets/comments/" . $comments[$i]['img']) .
+                            '" alt="company logo">';
+                        echo '</div>';
+
+                        echo '<div class="quote-by-author  col-1x1">';
+                        echo '<h6 class="Quote-V1">' .  $comments[$i]['title'] . '</h6>';
+                        echo '<h3 class="Quote-V1">' .  $comments[$i]['subtitle'] . '</h3>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo "</div>";
                     }
                     ?>
                 </div> <!-- .swiper-wrapper -->
                 <div class="swiper-pagination" id="swiper-comments"></div>
             </div> <!-- .swiper-container -->
+        </div> <!-- .swiper -->
     </section>
 
     <section class="clients grid">
@@ -204,10 +214,10 @@
             $clients = array('abf', 'CandorConnect', 'coop', 'DirtyWater', 'gooodchoices', 'HaleGlobal', 'mni', 'nextDoor', 'smca', 'winsight');
 
             for ($i = 0; $i < count($clients); $i++) {
-              echo '<figure class="clients-container-img">';
-              echo '<img src="' . get_theme_file_uri("/assets/clients/" . $clients[$i] . '.png') .
-                '"alt="' . $clients[$i] . ' logo">';
-              echo '</figure>';
+                echo '<figure class="clients-container-img">';
+                echo '<img src="' . get_theme_file_uri("/assets/clients/" . $clients[$i] . '.png') .
+                    '"alt="' . $clients[$i] . ' logo">';
+                echo '</figure>';
             }
             ?>
         </div>
