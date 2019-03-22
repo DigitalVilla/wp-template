@@ -24,7 +24,7 @@
       white-space: nowrap;
       transition: all .2s;
 
-      @include media (1200px) {
+      @include media (inLaptop) {
         font-size: 4.5rem;
       }
     }
@@ -61,7 +61,7 @@
   }
 
   @include media (inTablet) {
-    background-image: url('assets/design/mobility-quotient-rocky-mountains-bg.jpg');
+    background-image: url('../assets/design/mobility-quotient-rocky-mountains-bg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 14rem !important;

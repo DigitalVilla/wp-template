@@ -45,7 +45,7 @@ body {
   @include flex (center);
 
   &::before {
-    content: url(assets/design/bullet_home_titles.png);
+    content: url('../assets/design/bullet_home_titles.png');
     position: relative;
     left: -2rem;
   }

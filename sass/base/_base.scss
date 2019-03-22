@@ -20,6 +20,7 @@ html {
   @include media(desktop) {
     font-size: 75% !important; //12px
   }
+
   @include media(ultraHD) {
     font-size: 87.5% !important; //16px
   }
@@ -32,15 +33,19 @@ section {
   width: 100% !important;
   padding-top: 2rem !important;
   margin-bottom: 2rem !important;
-
+  min-height: 500px;
   // border: 1px solid #00f;
 
   @include media (inLaptop) {
-    margin-bottom: 2rem !important;
+    // margin-bottom: 2rem !important;
   }
-   @include media (desktop) {
-    padding-top: 5rem !important;
-  margin-bottom: 5rem !important;
+
+  @include media (desktop) {
+    margin-bottom: 9rem !important;
+  }
+
+  @include media (inPhone) {
+    margin-bottom: 5rem !important;
   }
 }
 

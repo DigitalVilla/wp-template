@@ -18,7 +18,7 @@
       margin-bottom: 2rem;
 
 
-      @include media (1200px) {
+      @include media (inLaptop) {
         width: calc(100% / 4);
       }
 
@@ -30,9 +30,9 @@
         width: calc(100% / 2);
       }
 
-      // @include media (inPhone) {
-      //   width: calc(100% / 2);
-      // }
+      @include media (360px) {
+        width: 100%;
+      }
 
       img {
         // width: 100%;

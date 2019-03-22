@@ -107,7 +107,7 @@ $gutter-horizontal: 2rem; // fields in between space
 }
 
 //break points
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: inLaptop) {
   .row {
     [class*="-lg"] {
       width: 100% !important;

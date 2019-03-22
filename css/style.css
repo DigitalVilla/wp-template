@@ -156,7 +156,7 @@ body {
     .hero-tileV1 {
       font-size: 3.5rem !important; } }
   .hero-tileV1::before {
-    content: url(assets/design/bullet_home_titles.png);
+    /* content: url(assets/design/bullet_home_titles.png); */
     position: relative;
     left: -2rem; }
   @media only screen and (max-width: 767px) {
@@ -517,7 +517,7 @@ body {
       padding: 2rem; }
   @media only screen and (max-width: 767px) {
     .intro {
-      background-image: url("assets/design/mobility-quotient-rocky-mountains-bg.jpg");
+      /* background-image: url("assets/design/mobility-quotient-rocky-mountains-bg.jpg"); */
       background-size: contain;
       background-repeat: no-repeat;
       padding-top: 14rem !important; }
@@ -538,7 +538,7 @@ body {
         padding: 0; } }
   @media only screen and (max-width: inTablet) {
     .intro {
-      background-image: url("assets/design/mobility-quotient-rocky-mountains-bg.jpg");
+      /* background-image: url("assets/design/mobility-quotient-rocky-mountains-bg.jpg"); */
       background-size: contain;
       background-repeat: no-repeat;
       padding-top: 14rem !important; }

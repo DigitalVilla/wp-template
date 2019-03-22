@@ -1,4 +1,4 @@
-.projects2 {
+.projects {
   min-height: 80vh;
   padding-bottom: 2rem;
   @include container;
@@ -10,6 +10,7 @@
     height: 100% !important;
     max-width: 550px !important;
     width: 50vw !important;
+    margin: 2rem auto;
 
     &-text {
       margin-bottom: 3rem;
@@ -17,20 +18,11 @@
 
   }
 
-  .crd1,
-  .crd2 {
-    margin: auto;
-  }
-
-  .crd1 {
-    margin-bottom: 2rem;
-  }
-
   &-button {
     text-align: center;
   }
 
-  @include media (1200px) {
+  @include media (inLaptop) {
     &-card {
       width: 45vw !important;
     }
@@ -68,6 +60,7 @@
   }
 
   @include media (inPhone) {
+    min-height: 100vh;
 
     .crd1,
     .crd2 {

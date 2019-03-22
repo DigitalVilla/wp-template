@@ -1,11 +1,9 @@
-.projects {
-  min-height: 80vh;
-  background: $color-light;
+.work {
+  height: 100vh !important;
   padding: 0 !important;
 
   &-title {
-    background: #fff;
-    height: 25%;
+    max-height: 25rem;
 
     &-text {
       height: 100%;
@@ -14,28 +12,28 @@
 
   .swiper {
     height: 70%;
-    padding: 2rem 0;
     position: relative;
     @include flex(center, stretch, column);
+    background: $color-light;
 
     &-container {
-      border: 2px solid rgb(255, 0, 128);
-      margin-top: 2rem;
-      height: 100%;
+      // padding-top: 4rem;
+      height: 100% !important;
       width: 100%;
+      @include flex(center, center, column);
     }
 
     &-slide {
-      border: 4px solid rgb(0, 255, 200);
       height: 100%;
       width: 100%;
     }
 
     &-pagination {
-      height: 20%;
+      bottom: 3rem;
       text-align: center;
-      border: 2px solid rgb(0, 255, 34);
       @include flex(center);
+      // border: 1px solid #00f;
+      cursor: pointer;
 
 
       &-switch {
@@ -51,6 +49,10 @@
         transition: 0.15s all linear;
 
         &:hover {
+          box-shadow: 0 0 0 0.25em rgba(0, 0, 0, 0.363);
+        }
+
+        &-active {
           background: #808080;
         }
       }
@@ -58,16 +60,18 @@
   }
 
   &-card {
+    width: 100% !important;
     @include container;
+    @include abs-center;
     @include flex(center);
-    padding: 0 4rem;
 
     &-laptop {
-      width: 100rem !important;
+      width: 75rem !important;
     }
 
     &-text {
       height: 40%;
+      margin: 0 !important;
       @include flex(space-between, baseline, column);
 
       .subtitle {
@@ -85,22 +89,48 @@
     }
   }
 
+  @include media (inLaptop) {
+
+    &-card {
+
+      &-laptop {
+        width: 61rem !important;
+      }
+    }
+  }
+
   @include media (iniPad) {
+    height: 60vh;
+
+    .swiper {
+      height: 50rem !important;
+
+      &-container {
+        // padding-top: 4rem;
+      }
+    }
+
     &-card {
       padding: 0 .5rem 0 2rem;
 
       &-laptop {
-        width: 75rem;
+        width: 45rem !important;
       }
     }
 
   }
 
   @include media (inTablet) {
-    background: none;
+    height: 80vh !important;
+
+    &-title {
+      // height: 10% !important;
+    }
 
     .swiper {
       padding: 0;
+      height: 50vh;
+      background: none;
 
       &-container {
         margin-top: 0;
@@ -119,7 +149,8 @@
       margin-bottom: 0;
 
       &-laptop {
-        max-width: 70vw;
+        width: 90% !important;
+        max-width: 50rem !important;
       }
 
       &-text {
@@ -127,10 +158,11 @@
         padding: 2rem;
         align-items: center;
         text-align: center;
+        width: 90% !important;
 
         .subtitle,
         .title-black {
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
         }
 
       }
@@ -138,6 +170,12 @@
   }
 
   @include media (inPhone) {
+
+    // height: 100vh !important;
+    .swiper {
+      // height: 80% !important;
+    }
+
     &-card {
       flex-direction: column;
       align-items: center;
@@ -151,7 +189,12 @@
 
       &-text {
         .title-black {
-          font-size: 2.2rem;
+          font-size: 2rem;
+        }
+
+        .subtitle,
+        .title-black {
+          margin-bottom: 0rem;
         }
 
         text-align: center;
