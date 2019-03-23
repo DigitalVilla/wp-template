@@ -111,7 +111,7 @@
   // Default  Breakpoints
 
   @if $breakpoint==phone {
-    @media only screen and (min-width: $phone) {
+    @media only screen and (min-width: $phone + 1px) {
       @content
     }
 
@@ -119,7 +119,7 @@
   }
 
   @if $breakpoint==tablet {
-    @media only screen and (min-width: $tablet) {
+    @media only screen and (min-width: $tablet + 1px) {
       @content
     }
 
@@ -127,7 +127,7 @@
   }
 
   @if $breakpoint==ipad {
-    @media only screen and (min-width: $ipad) {
+    @media only screen and (min-width: $ipad + 1px) {
       @content
     }
 
@@ -135,7 +135,7 @@
   }
 
   @if $breakpoint==laptop {
-    @media only screen and (min-width: $laptop) {
+    @media only screen and (min-width: $laptop + 1px) {
       @content
     }
 
@@ -143,7 +143,7 @@
   }
 
   @if $breakpoint==desktop {
-    @media only screen and (min-width: $desktopHD) {
+    @media only screen and (min-width: $desktopHD ) {
       @content
     }
 

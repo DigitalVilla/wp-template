@@ -18,11 +18,13 @@
       height: 100%;
       object-fit: contain;
     }
+
+
   }
 
   &-text-container {
     position: absolute;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
     top: 50%;
     right: 0;
     padding-right: 6rem;
@@ -42,6 +44,14 @@
 
     &-button {
       float: right;
+    }
+  }
+
+  @include media(desktop) {
+
+    &-banner-container,
+    &-text-container {
+      margin-top: 4rem;
     }
   }
 

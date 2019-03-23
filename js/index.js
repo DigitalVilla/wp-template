@@ -2,6 +2,7 @@ import Swiper from 'swiper';
 import swiperCSS from 'swiper/dist/css/swiper.css';
 import {options} from './SwiperConfig';
 import stickyNav from './stickNavbar';
+import mobile from './mobileNav';
 import styles from '../sass/main.scss';
 // import { Swiper, Navgation, Pagination } from 'swiper/dist/js/swiper.esm.js';
 // Swiper.use([Navgation, Pagination]);

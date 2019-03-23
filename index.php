@@ -18,21 +18,23 @@
         </div>
     </header>
 
-    <main class="intro grid">
-        <div class="row intro-container">
-            <figure class="col-1x2-md intro-banner">
-                <h2 class="intro-banner-title title-main">More than just a <br> web dev shop</h2>
-                <img class="intro-banner-img  bg-main" src="<?php echo get_theme_file_uri('/assets/design/MQgraph02-comp.png') ?>" alt="banff">
-            </figure>
+    <main class="intro">
+        <div class="grid">
+            <div class="row intro-container">
+                <figure class="col-1x2-md intro-banner">
+                    <h2 class="intro-banner-title title-main">More than just a <br> web dev shop</h2>
+                    <img class="intro-banner-img  bg-main" src="<?php echo get_theme_file_uri('/assets/design/MQgraph02-comp.png') ?>" alt="banff">
+                </figure>
 
-            <div class="col-1x2-md intro-text">
-                <h4 class="intro-text-title">Based in Calgary, AB, Mobility Quotient (MQ) specializes in software
-                    development, marketing, business process management, and digital transformations.</h4>
-                <p class="intro-text-info">If you need a team to help you with your website, then we’re the people to call.
-                    However, we’re more than just a web development shop. We can improve your online brand strategy, we can
-                    design mockups to visualize your next great idea, and we can help you reinvent your business by embracing
-                    technology.</p>
-                <button class="black-btn intro-text-button">More About Us</button>
+                <div class="col-1x2-md intro-text">
+                    <h4 class="intro-text-title">Based in Calgary, AB, Mobility Quotient (MQ) specializes in software
+                        development, marketing, business process management, and digital transformations.</h4>
+                    <p class="intro-text-info">If you need a team to help you with your website, then we’re the people to call.
+                        However, we’re more than just a web development shop. We can improve your online brand strategy, we can
+                        design mockups to visualize your next great idea, and we can help you reinvent your business by embracing
+                        technology.</p>
+                    <button class="black-btn intro-text-button">More About Us</button>
+                </div>
             </div>
         </div>
     </main>
@@ -84,35 +86,37 @@
         </div> <!-- .swiper window-->
     </section>
 
-    <section class="projects grid">
-        <div class="row projects-container">
-            <?php
-            $proj2[0] = array('img' => 'pro-Ahlstrom-Wright-cover.jpg', 'title' => 'Ahlstrom Wright', 'subtitle' => 'Website Rebuild & Brand Alignment', 'link' => '#');
-            $proj2[1] = array('img' => 'pro-xtime-cover.jpg', 'title' => 'XTIME', 'subtitle' => 'Customer Relationship Manager', 'link' => '#');
+    <section class="projects">
+        <div class="grid">
+            <div class="row projects-container">
+                <?php
+                $proj2[0] = array('img' => 'pro-Ahlstrom-Wright-cover.jpg', 'title' => 'Ahlstrom Wright', 'subtitle' => 'Website Rebuild & Brand Alignment', 'link' => '#');
+                $proj2[1] = array('img' => 'pro-xtime-cover.jpg', 'title' => 'XTIME', 'subtitle' => 'Customer Relationship Manager', 'link' => '#');
 
-            for ($i = 0; $i < count($proj2); $i++) {
-                echo '<div class="col-1x2-md">';
-                echo '<div class="projects-card ' . ($i == 0 ? 'crd1' : 'crd2') . ' cardV1">';
-                echo '<div class="projects-card-text">';
-                echo '<h6 class="subtitle">' . $proj2[$i]['subtitle'] . '</h6>';
-                echo '<a class="title-black" href="' . $proj2[$i]['link'] . '">' . $proj2[$i]['title'] . '</a>';
-                echo '</div>';
-                echo '<div class="projects-card-laptop laptop">';
-                echo '<div class="laptop-top">';
-                echo '<div class="laptop-top-screen"';
-                echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj2[$i]['img']) . ');">';
-                echo '</div>';
-                echo '</div>';
-                echo '<div class="laptop-bottom"></div>';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-            }
-            ?>
-        </div>
+                for ($i = 0; $i < count($proj2); $i++) {
+                    echo '<div class="col-1x2-md">';
+                    echo '<div class="projects-card ' . ($i == 0 ? 'crd1' : 'crd2') . ' cardV1">';
+                    echo '<div class="projects-card-text">';
+                    echo '<h6 class="subtitle">' . $proj2[$i]['subtitle'] . '</h6>';
+                    echo '<a class="title-black" href="' . $proj2[$i]['link'] . '">' . $proj2[$i]['title'] . '</a>';
+                    echo '</div>';
+                    echo '<div class="projects-card-laptop laptop">';
+                    echo '<div class="laptop-top">';
+                    echo '<div class="laptop-top-screen"';
+                    echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj2[$i]['img']) . ');">';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<div class="laptop-bottom"></div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
 
-        <div class="row projects-button ">
-            <a href="#" class="black-btn projects-button-btn">More Projects</a>
+            <div class="row projects-button ">
+                <a href="#" class="black-btn projects-button-btn">More Projects</a>
+            </div>
         </div>
     </section>
 

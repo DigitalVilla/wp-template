@@ -16,15 +16,15 @@ export default function stickyNav() {
     // console.log("documentElement", document.documentElement.scrollTop);
     if (window.innerWidth >= 768) {
 
-      if (document.documentElement.scrollTop >= 75) {
+      if (document.documentElement.scrollTop >= 65) {
         sn.style.top = "0";
         sn.style.position = "fixed";
 
         // } else {
         //   sn.style.top = "-105px"
-      } else if (document.documentElement.scrollTop < 75) {
+      } else if (document.documentElement.scrollTop < 65) {
         sn.style.position = "absolute";
-        sn.style.top = "7.5rem";
+        sn.style.top = "65px";
       }
     } else {
       sn.style.position = "fixed";

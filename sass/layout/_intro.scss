@@ -1,13 +1,13 @@
 .intro {
-  min-height: 80vh;
+  min-height: 80vh !important;
+  max-height: 100rem;
   position: relative;
-
 
   &-container {
     @include container;
 
     @include media (tablet) {
-     @include flex(center);
+      @include flex(center);
     }
   }
 
@@ -39,6 +39,7 @@
   &-text {
     @include flex(center, baseline, column);
     transition: none;
+    padding: 2rem;
 
     &-title {
       font-size: 2rem;
@@ -49,14 +50,6 @@
       font-size: 1.6rem;
       line-height: 1.5;
       margin-bottom: 2rem;
-    }
-  }
-
-  [class*="col-"] {
-    height: 100%;
-
-    &:last-child {
-      padding: 2rem;
     }
   }
 
@@ -86,16 +79,8 @@
       }
     }
 
-
     &-banner {
       display: none !important;
     }
-
-    [class*="col-"] {
-      &:last-child {
-        padding: 0;
-      }
-    }
   }
-
 }

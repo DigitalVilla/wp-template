@@ -1,7 +1,8 @@
 .cardV1 {
   height: 30rem;
   max-width: 40rem;
-  background: $color-light;
+  // background: $color-light;
+    background: radial-gradient(ellipse at center, $color-light 12.5%, darken($color-light,5%) 93.75%);
   border-radius: 1rem;
 
   @include on-event () {

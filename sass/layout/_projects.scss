@@ -62,10 +62,19 @@
   @include media (inPhone) {
     min-height: 100vh;
 
+    &-card {
+      &-text {
+        padding-top: 1rem;
+        padding-left: 2rem;
+margin-bottom: 2rem;
+      }
+    }
+
     .crd1,
     .crd2 {
       width: 95% !important;
-      padding: 1rem !important;
+      padding: 0 !important;
+      padding-bottom: 2rem !important;
     }
   }
 

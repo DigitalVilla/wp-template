@@ -1,0 +1,87 @@
+.navbar-mobile {
+
+  &-line {
+    width: 100vw;
+    height: 2px;
+    background-image: linear-gradient(to right, $color-brand2, $color-brand4);
+    // margin-left: -2.1rem;
+  }
+
+  &-nav {
+    @include flex (space-between);
+    padding: 1rem 2rem 0 2rem;
+    height: 5.5rem;
+
+    &-link {
+
+      &-img,
+      &-logo {
+        height: 3rem;
+        width: auto;
+      }
+    }
+
+    &-menu {
+      // background-color: $color-white;
+      height: 5rem;
+      width: 5rem;
+      position: fixed;
+      // border: 1px solid rgba(0, 0, 255, 0.301);
+      top: .5rem;
+      left: 1.2rem;
+      border-radius: 50%;
+      z-index: 2000;
+      // box-shadow: 0 1rem 3rem rgba($color-black, .1);
+      // text-align: center;
+      // cursor: pointer;
+
+      // @include respond(tab-port) {
+      //   top: 4rem;
+      //   right: 4rem;
+      // }
+
+      // @include respond(phone) {
+      //   top: 3rem;
+      //   right: 3rem;
+      // }
+    }
+  }
+
+  &-content {
+    display: none;
+  }
+
+  @include media(tablet) {
+    display: none;
+
+    &-content {
+      display: none;
+    }
+  }
+}
+
+
+.navbar-mobile-content {
+  z-index: 2000;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient( rgba($color-brand2, 1), rgba($color-brand3, 1));
+  background-position: center;
+
+  &-list {
+    height: 60%;
+    @include vertical-align;
+    @include flex(space-around,center,column);
+    list-style: none;
+    color: #fff;
+      // border: 1px solid #00f;
+    text-align: left;
+    &-item {
+      // border: 1px solid #00f;
+      width: 8rem;
+    }
+  }
+}

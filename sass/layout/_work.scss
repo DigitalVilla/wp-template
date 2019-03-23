@@ -14,7 +14,8 @@
     height: 70%;
     position: relative;
     @include flex(center, stretch, column);
-    background: $color-light;
+    // background: $color-light;
+     background: radial-gradient(ellipse at center, $color-light 12.5%, darken($color-light,10%) 93.75%);
 
     &-container {
       // padding-top: 4rem;
@@ -144,7 +145,7 @@
   }
 
   @include media (inPhone) {
-
+  // height: 100vh !important;
     // height: 100vh !important;
     .swiper {
       // height: 80% !important;
