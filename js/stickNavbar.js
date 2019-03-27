@@ -8,8 +8,8 @@ export default function stickyNav() {
     }, true);
 
   function scrollFunction() {
-    console.log('with',window.innerWidth);
-    console.log('scroll',document.documentElement.scrollTop);
+    // console.log('with',window.innerWidth);
+    // console.log('scroll',document.documentElement.scrollTop);
 
     let sn = document.getElementById("sticky-navbar");
 

@@ -143,7 +143,7 @@
   }
 
   @if $breakpoint==desktop {
-    @media only screen and (min-width: $desktopHD ) {
+    @media only screen and (min-width: $desktop +1px) {
       @content
     }
 
@@ -161,14 +161,15 @@
   // Specific Breakpoints
 
   @if $breakpoint==inPhone {
-    @media only screen  and (max-width: 480px) {
+    @media only screen and (max-width: 480px) {
       @content
     }
 
     ;
   }
+
   @if $breakpoint==inPhoneS {
-    @media only screen  and (max-width: 360px) {
+    @media only screen and (max-width: 360px) {
       @content
     }
 
@@ -183,6 +184,7 @@
 
     ;
   }
+
   @if $breakpoint==inLaptop {
     @media only screen and (max-width: $laptop) {
       @content
@@ -190,8 +192,17 @@
 
     ;
   }
+
   @if $breakpoint==iniPad {
     @media only screen and (max-width: $ipad) {
+      @content
+    }
+
+    ;
+  }
+
+  @if $breakpoint==inDesktop {
+    @media only screen and (max-width: $desktop) {
       @content
     }
 
@@ -226,9 +237,10 @@
 }
 
 @mixin container {
-    max-width: $max-width;
-    margin: auto;
-    @include media (desktop){
-      max-width: $max-widthL;
-    }
+  max-width: $max-width;
+  margin: auto;
+
+  @include media (desktop) {
+    max-width: $max-widthL;
+  }
 }

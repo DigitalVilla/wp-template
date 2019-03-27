@@ -21,7 +21,6 @@
         height: 5rem;
         width: auto;
       }
-
     }
 
     &-list {
@@ -42,7 +41,6 @@
         transition: all .2s;
 
         &:hover {
-
           &:nth-child(1) {
             & a {
               color: $color-brand1;
@@ -92,7 +90,6 @@
           font-weight: 500;
         }
       }
-
     }
   }
 

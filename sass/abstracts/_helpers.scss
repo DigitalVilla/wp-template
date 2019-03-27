@@ -8,3 +8,22 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+.flexCol {
+   @include flex(space-around, center, column);
+}
+
+.fadeOut {
+ animation: fadeOut .2s forwards ;
+}
+
+.fadeIn {
+  animation: fadeIn .5s forwards ;
+}
