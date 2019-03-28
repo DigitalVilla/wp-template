@@ -121,8 +121,8 @@ $gutter-horizontal: 2rem; // fields in between space
     width: calc(4 * ((100% - 5 * #{$gutter-horizontal}) / 6) + 3 * #{$gutter-horizontal});
   }
 
-  [class*="col-4x6"] {
-    width: calc(4 * ((100% - 5 * #{$gutter-horizontal}) / 6) + 6 * #{$gutter-horizontal});
+  [class*="col-5x6"] {
+    width: calc(5 * ((100% - 5 * #{$gutter-horizontal}) / 6) + 4 * #{$gutter-horizontal});
   }
 }
 

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
+    <!-- <title><?php  ?></title> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <nav class="navbar" id="sticky-navbar">
         <div class="navbar-nav">
             <a class="navbar-nav-logo" href="#">
-                <img class="navbar-nav-item-logo-img" src="<?php echo get_theme_file_uri('/assets/svg/MQfull-logo.svg') ?>" height width alt="MQ Mobile Menu Logo">
+                <?php if (has_custom_logo()) : ?>
+                <a href="">
+                    <?php the_custom_logo(); ?>
+                </a>
+
+                <?php else : ?>
+                <h1> <?php bloginfo("name") ?> </h1>
+                <?php endif; ?>
             </a>
-            <ul class="navbar-nav-list">
-                <li class="navbar-nav-list-item">
-                    <a href="#work" target="_self">Work</a>
-                </li>
-                <li class="navbar-nav-list-item ">
-                    <a href="#our-story" target="_self">Our Story</a></li>
-                <li class="navbar-nav-list-item ">
-                    <a href="#services" target="_self">Services</a></li>
-                <li class="navbar-nav-list-item ">
-                    <a href="#news" target="_self">Press</a>
-                </li>
-                <li class="navbar-nav-list-item">
-                    <a href="#careers" target="_self">Careers</a></li>
+            <div class="navbar-nav-list">
+                <?php
+                $args = array('theme_menu' => 'primary');
+                wp_nav_menu($args);
+                ?>
                 <a class="navbar-nav-list-button black-btn" href="#contact"> Ask us </a>
-            </ul>
+            </div>
         </div>
     </nav>
 
@@ -49,23 +50,14 @@
         <div class="navbar-mobile-line"></div>
 
         <div class="navbar-mobile-content-bg" id="menu-bg"></div>
-        <ul class="navbar-mobile-content-list hide" id="menu-list">
-            <li class="navbar-mobile-content-item ">
-                <a href="#">
-                    <img class="navbar-mobile-content-logo" src="<?php echo get_theme_file_uri('/assets/svg/MQfull-logoWhite.svg') ?>" height width alt="MQ Mobile Menu Logo">
-                </a>
-            </li>
-            <li class="navbar-mobile-content-item">
-                <a href="#work" target="_self">Work</a>
-            </li>
-            <li class="navbar-mobile-content-item ">
-                <a href="#our-story" target="_self">Our Story</a></li>
-            <li class="navbar-mobile-content-item ">
-                <a href="#services" target="_self">Services</a></li>
-            <li class="navbar-mobile-content-item">
-                <a href="#news" target="_self">Press</a>
-            </li>
-            <li class="navbar-mobile-content-item ">
-                <a href="#careers" target="_self">Careers</a></li>
-        </ul>
+
+        <div class="navbar-mobile-content-list hide" id="menu-list">
+            <a href="#">
+                <img class="navbar-mobile-content-logo" src="<?php echo get_theme_file_uri('/assets/svg/MQfull-logoWhite.svg') ?>" height width alt="MQ Mobile Menu Logo">
+            </a>
+            <?php
+            $args = array('theme_menu' => 'primary');
+            wp_nav_menu($args);
+            ?>
+        </div>
     </nav>

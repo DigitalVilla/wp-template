@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-1x1 footer-bottom-bar">
                     <span class="footer-copyright-text">
-                        © 2019 Mobility Quotient Solutions Inc. <span class="all-rights-reserved">All rights reserved.</span>
+                        &copy; 2019 <?php  bloginfo('name') ?> <span class="all-rights-reserved">All rights reserved.</span>
                     </span>
                 </div>
             </div>
@@ -69,4 +69,5 @@
 
 <?php wp_footer(); ?>
 </body>
+
 </html>

@@ -1,4 +1,5 @@
 .navbar-mobile {
+  min-width: $phone;
 
   &-line {
     width: 100vw;
@@ -21,7 +22,7 @@
       }
     }
 
-    // button
+    // menu hamburer button
     &-menu {
       border: none;
       position: absolute;
@@ -40,13 +41,13 @@
         background-color: $color-brand2;
         height: 2px !important;
         position: absolute;
-        transition: all .2s;
+        transition: all .3s;
         z-index: 2200;
-        width: 3.5rem;
+        width: 3rem;
         left: calc((5rem - 3.5rem) /2);
 
         &:nth-of-type(1) {
-          top: 1.2rem;
+          top: 1.4rem;
         }
 
         &:nth-of-type(2) {
@@ -55,7 +56,7 @@
         }
 
         &:nth-of-type(3) {
-          bottom: 1.2rem;
+          bottom: 1.4rem;
         }
       }
     }
@@ -63,10 +64,6 @@
 
   @include media(tablet) {
     display: none;
-
-    // &-content {
-    //   display: none;
-    // }
   }
 
   &-content {
@@ -79,35 +76,38 @@
       left: 1.2rem;
       border-radius: 50%;
       transition: all .3s;
-      background-image: radial-gradient(rgb(31, 31, 31), rgb(0, 0, 0));
+      background-image: radial-gradient(rgb(0, 0, 0), rgb(26, 26, 26));
       transform: scale(0);
-      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2)
+
     }
 
     &-list {
-      // @include flex(space-around, center, column);
       transform-origin: top left;
       @include vertical-align;
       position: fixed;
       text-align: left;
-      list-style: none;
       color: #fff;
       z-index: 2000;
       height: 60%;
       width: 100%;
       z-index: 2000;
-    }
 
-    &-item {
-      &:not(:first-child) {
-        width: 12rem;
-        font-size: 2.4rem;
+      ul {
+        list-style: none;
+        height: 100%;
+
+        li {
+          width: 12rem;
+          font-size: 2.4rem;
+          margin-bottom: 5vh;
+        }
       }
     }
 
     &-logo {
       height: 5rem;
       width: auto;
+      margin-bottom: 5vh;
     }
   }
 }

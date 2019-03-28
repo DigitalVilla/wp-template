@@ -1,6 +1,7 @@
 .navbar {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.7) 100%);
   width: 100vw;
+  min-width: 320px;
   z-index: 1000;
   height: 5rem;
 
@@ -10,38 +11,71 @@
     min-width: $phone;
     max-width: $max-widthL;
     padding-right: 2rem;
-    @include flex (space-between);
+    // @include flex (space-between);
+    position: relative;
 
-    &-logo {
-      transition: all .2s;
-      background-image: transparent;
-      border-radius: 5px;
-
-      & img {
-        height: 5rem;
-        width: auto;
-      }
+    .custom-logo {
+      height: 5rem;
+      width: auto;
+      display: inline-block;
+      @include vertical-align;
     }
 
     &-list {
+      float: right;
       @include flex (space-between);
+      height: 100%;
 
-      &-button {
-        margin-bottom: 4px;
-      }
+      ul {
+        @include flex (space-between);
 
-      &-item {
-        margin-top: 5px;
-        display: none;
-        list-style: none;
-        margin-right: 2rem;
-        padding-bottom: .4rem;
-        transition: color .1s;
-        border-bottom: 4px solid transparent;
-        transition: all .2s;
+        &-button {
+          margin-bottom: 4px;
+        }
 
-        &:hover {
-          &:nth-child(1) {
+        li {
+          margin-top: 5px;
+          display: none;
+          list-style: none;
+          margin-right: 2rem;
+          padding-bottom: .4rem;
+          transition: color .1s;
+          border-bottom: 4px solid transparent;
+          transition: all .2s;
+
+          &:hover {
+            &:nth-child(1) {
+              & a {
+                color: $color-brand1;
+              }
+
+              border-bottom: 4px solid $color-brand1;
+            }
+
+            &:nth-child(2) {
+              & a {
+                color: $color-brand3;
+              }
+
+              border-bottom: 4px solid $color-brand3;
+            }
+
+            &:nth-child(3) {
+              & a {
+                color: $color-brand2;
+              }
+
+              border-bottom: 4px solid $color-brand2;
+            }
+
+            &:nth-child(4) {
+              & a {
+                color: $color-brand4;
+              }
+
+              border-bottom: 4px solid $color-brand4;
+            }
+
             & a {
               color: $color-brand1;
             }
@@ -49,45 +83,15 @@
             border-bottom: 4px solid $color-brand1;
           }
 
-          &:nth-child(2) {
-            & a {
-              color: $color-brand3;
-            }
-
-            border-bottom: 4px solid $color-brand3;
-          }
-
-          &:nth-child(3) {
-            & a {
-              color: $color-brand2;
-            }
-
-            border-bottom: 4px solid $color-brand2;
-          }
-
-          &:nth-child(4) {
-            & a {
-              color: $color-brand4;
-            }
-
-            border-bottom: 4px solid $color-brand4;
-          }
-
           & a {
-            color: $color-brand1;
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            color: #222;
+            font-size: 1.5rem;
+            line-height: 1.34;
+            font-weight: 500;
           }
-
-          border-bottom: 4px solid $color-brand1;
-        }
-
-        & a {
-          font-family: "Montserrat", sans-serif;
-          text-transform: uppercase;
-          text-align: center;
-          color: #222;
-          font-size: 1.5rem;
-          line-height: 1.34;
-          font-weight: 500;
         }
       }
     }
@@ -111,8 +115,9 @@
     }
   }
 
-  @include media(inTablet) { // hide navbar
-      display: none;
+  @include media(inTablet) {
+    // hide navbar
+    display: none;
   }
 
 
@@ -125,8 +130,8 @@
     top: 65px;
 
     &-nav {
-      &-list {
-        &-item {
+      ul {
+        li {
           display: block; //show items
         }
       }
