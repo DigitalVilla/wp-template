@@ -176,6 +176,14 @@
     ;
   }
 
+  @if $breakpoint==inPhoneL {
+    @media only screen and (max-width: 574px) {
+      @content
+    }
+
+    ;
+  }
+
 
   @if $breakpoint==inTablet {
     @media only screen and (max-width: $tablet) {

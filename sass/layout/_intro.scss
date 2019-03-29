@@ -54,10 +54,20 @@
   }
 
   @include media (inTablet) {
-    background-image: url('../assets/design/mobility-quotient-rocky-mountains-bg.jpg');
+    // background-image: inherit !important;
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 14rem !important;
+    &::before {
+      position:absolute;
+      background: #fff;
+      content: "";
+      width: 100%;
+      height: 60%;
+      top: 40%;
+      left: 0;
+    }
+
 
     &-text {
       background: #fff;
@@ -83,4 +93,9 @@
       display: none !important;
     }
   }
+
+  @include media(tablet) {
+    background-image: none !important;
+  }
+
 }

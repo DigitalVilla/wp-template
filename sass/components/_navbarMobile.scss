@@ -37,6 +37,9 @@
       transition: all .2s;
       padding: .7rem;
 
+      position: fixed;
+
+
       & div {
         background-color: $color-brand2;
         height: 2px !important;
@@ -76,7 +79,8 @@
       left: 1.2rem;
       border-radius: 50%;
       transition: all .3s;
-      background-image: radial-gradient(rgb(0, 0, 0), rgb(26, 26, 26));
+      background: #000;
+        // background-image: linear-gradient(to top right,  $color-brand1 ,$color-brand3 ,$color-brand4  );
       transform: scale(0);
 
     }

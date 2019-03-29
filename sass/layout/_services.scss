@@ -10,7 +10,11 @@
     }
 
     @include media(inTablet) {
-      padding: 2rem;
+      padding: 0 2rem;
+    }
+
+    @include media(inPhoneL) {
+      padding: 0;
     }
   }
 
@@ -37,11 +41,12 @@
   &-card-buttonn {
     margin: auto;
     max-width: 40rem;
-    margin-top: -3rem;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
     z-index: 100;
     text-align: center;
 
-    & button {
+    & a {
       box-shadow: none !important;
 
       &::after {

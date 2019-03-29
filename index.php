@@ -5,35 +5,49 @@
     <header class="hero">
         <div class="hero-banner-container">
             <video autoplay muted loop class="hero-video noSelect">
-                <source src="<?php echo get_theme_file_uri('/assets/media/hero_mask_compressed.webm') ?>" type="video/webm">
-                <source src="<?php echo get_theme_file_uri('/assets/media/hero_mask_compressed_h264.mp4') ?>" type="video/mp4">
+                <source src=" <?php echo wp_get_attachment_url(get_theme_mod('banner_video')) ?>" type="video/mp4">
             </video>
         </div>
         <div class="hero-text-container">
-            <img class="hero-text-container-img bg-main" src="<?php echo get_theme_file_uri('/assets/design/home-hero-mobile-logo.png') ?>">
+            <img class="hero-text-container-img bg-main" src="
+             <?php echo get_theme_mod('banner_mobile_image', get_theme_file_uri('/assets/design/home-hero-mobile-logo.png')) ?>">
             <h1 class="hero-text-container-title title-main">
-                Your Full-Service<br>
-                Digital Agency </h1>
-            <button class="black-btn hero-text-container-button">Services we offer</button>
+                <?php echo get_theme_mod('banner_heading', 'Your Full-Service') ?> <br>
+                <?php echo get_theme_mod('banner_subheading', 'Digital Agency') ?> </h1>
+            <a class="black-btn hero-text-container-button" href="<?php echo get_theme_mod('banner_button_url', '') ?>">
+                <?php echo get_theme_mod('banner_button_text', 'Services We Offer') ?> </a>
         </div>
     </header>
 
-    <main class="intro">
+    <main class="intro" style="background-image:url(<?php echo get_theme_mod('intro_mobile_image',
+        get_theme_file_uri('/assets/design/mobility-quotient-rocky-mountains-bg.jpg')); ?>)">
         <div class="grid">
             <div class="row intro-container">
                 <figure class="col-1x2-md intro-banner">
-                    <h2 class="intro-banner-title title-main">More than just a <br> web dev shop</h2>
-                    <img class="intro-banner-img  bg-main" src="<?php echo get_theme_file_uri('/assets/design/MQgraph02-comp.png') ?>" alt="banff">
+                    <h2 class="intro-banner-title title-main">
+                        <?php echo get_theme_mod('intro_heading', ' More than just a') ?> <br>
+                        <?php echo get_theme_mod('intro_subheading', 'web dev shop') ?></h2>
+                    <img class="intro-banner-img  bg-main" src=" <?php echo get_theme_mod('intro_image',
+                     get_theme_file_uri('/assets/design/MQgraph02-comp.png')) ?>" alt="banff image">
                 </figure>
-
                 <div class="col-1x2-md intro-text">
-                    <h4 class="intro-text-title">Based in Calgary, AB, Mobility Quotient (MQ) specializes in software
-                        development, marketing, business process management, and digital transformations.</h4>
-                    <p class="intro-text-info">If you need a team to help you with your website, then we’re the people to call.
+                    <h4 class="intro-text-title">
+                        <?php echo get_theme_mod(
+                            'intro_main_text',
+                            'Based in Calgary, AB, Mobility Quotient (MQ) specializes in software development,
+                            marketing,business process management, and digital transformations.'
+                        ) ?> </h4>
+                    <p class="intro-text-info">
+                        <?php echo get_theme_mod(
+                            'intro_secondary_text',
+                            'If you need a team to help you with your website, then we’re the people to call.
                         However, we’re more than just a web development shop. We can improve your online brand strategy, we can
                         design mockups to visualize your next great idea, and we can help you reinvent your business by embracing
-                        technology.</p>
-                    <button class="black-btn intro-text-button">More About Us</button>
+                        technology.'
+                        ) ?></p>
+                    <a class="black-btn intro-text-button" href="<?php echo get_theme_mod('intro_button_url', '') ?>">
+                        <?php echo get_theme_mod('intro_button_text', 'More About Us') ?>
+                    </a>
                 </div>
             </div>
         </div>
@@ -41,31 +55,31 @@
 
     <section class="work">
         <div class="row work-title">
-            <h2 class="work-title-text hero-tileV1">Our Work</h2>
+            <h2 class="work-title-text hero-tileV1"> <?php echo get_theme_mod('work_header', 'Our Work') ?></h2>
         </div>
-
-        <!-- <div class="row swiper noSelect" style="cursor: -moz-grab;"> -->
         <div class="row swiper" style="cursor: -moz-grab;">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <?php
-                    $proj[0] = array('img' => 'web-grocery.jpg', 'title' => 'Website Acquisition, Migration and Redesign', 'subtitle' => 'Grocery Business', 'link' => '#');
-                    $proj[1] = array('img' => 'web-justbeer.jpg', 'title' => 'The Website and App for Beer Drinkers!', 'subtitle' => 'JustBeer', 'link' => '#');
-                    $proj[2] = array('img' => 'web-news.jpg', 'title' => 'Hyper-Local News Publisher', 'subtitle' => 'Patch.com', 'link' => '#');
 
-                    for ($i = 0; $i < count($proj); $i++) {
+                    //Default values
+                   $work[0] = array('img' => 'web-grocery.jpg', 'details' => 'Website Acquisition, Migration and Redesign', 'name' => 'Grocery Business', 'url' => '#');
+                   $work[1] = array('img' => 'web-justbeer.jpg', 'details' => 'The Website and App for Beer Drinkers!', 'name' => 'JustBeer', 'url' => '#');
+                   $work[2] = array('img' => 'web-news.jpg', 'details' => 'Hyper-Local News Publisher', 'name' => 'Patch.com', 'url' => '#');
+
+                    for ($i = 0; $i < count($work); $i++) {
                         echo '<div class="swiper-slide">';
                         echo '<div class="col-1x1-md">';
                         echo '<div class="work-card ">';
                         echo '<div class="work-card-text noSelect col-2x5">';
-                        echo '<h6 class="subtitle">' . $proj[$i]['subtitle'] . '</h6>';
-                        echo '<h3 class="title-black">' . $proj[$i]['title'] . '</h3>';
-                        echo '<a class="black-btn" href="' . $proj[$i]['link'] . '">View More</a>';
+                        echo '<h6 class="subtitle">' . get_theme_mod('work_name_'. ($i+1),$work[$i]['name']) . '</h6>';
+                        echo '<h3 class="title-black">' . get_theme_mod('work_details_'. ($i+1),$work[$i]['details']) . '</h3>';
+                        echo '<a class="black-btn" href="' . get_theme_mod('work_button_url_'. ($i+1),$work[$i]['url']) . '">'.get_theme_mod('work_button_text_'. ($i+1), 'View More').'</a>';
                         echo '</div>';
                         echo '<div class="work-card-laptop col-3x5 laptop">';
                         echo '<div class="laptop-top">';
                         echo '<div class="laptop-top-screen"';
-                        echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj[$i]['img']) . ');">';
+                        echo 'style="background-image: url(' . get_theme_mod('work_image_'. ($i+1), get_theme_file_uri("/assets/projects/" .$work[$i]['img'])) . ');">';
                         echo '</div>';
                         echo '</div>';
                         echo '<div class="laptop-bottom"></div>';
@@ -90,20 +104,22 @@
         <div class="grid">
             <div class="row projects-container">
                 <?php
-                $proj2[0] = array('img' => 'pro-Ahlstrom-Wright-cover.jpg', 'title' => 'Ahlstrom Wright', 'subtitle' => 'Website Rebuild & Brand Alignment', 'link' => '#');
-                $proj2[1] = array('img' => 'pro-xtime-cover.jpg', 'title' => 'XTIME', 'subtitle' => 'Customer Relationship Manager', 'link' => '#');
 
-                for ($i = 0; $i < count($proj2); $i++) {
+                //Default values
+                $proj[0] = array('img' => 'pro-Ahlstrom-Wright-cover.jpg', 'name' => 'Ahlstrom Wright', 'details' => 'Website Rebuild & Brand Alignment', 'url' => '#');
+                $proj[1] = array('img' => 'pro-xtime-cover.jpg', 'name' => 'XTIME', 'details' => 'Customer Relationship Manager', 'url' => '#');
+
+                for ($i = 0; $i < count($proj); $i++) {
                     echo '<div class="col-1x2-md">';
                     echo '<div class="projects-card ' . ($i == 0 ? 'crd1' : 'crd2') . ' cardV1">';
                     echo '<div class="projects-card-text">';
-                    echo '<h6 class="subtitle">' . $proj2[$i]['subtitle'] . '</h6>';
-                    echo '<a class="title-black" href="' . $proj2[$i]['link'] . '">' . $proj2[$i]['title'] . '</a>';
+                    echo '<h6 class="subtitle">' . get_theme_mod('project_details_'. ($i+1),$proj[$i]['details']) . '</h6>';
+                    echo '<a class="title-black" href="' . get_theme_mod('project_name_url_'. ($i+1),$proj[$i]['url']) . '">' . get_theme_mod('project_name_'. ($i+1), $proj[$i]['name']) . '</a>';
                     echo '</div>';
                     echo '<div class="projects-card-laptop laptop">';
                     echo '<div class="laptop-top">';
                     echo '<div class="laptop-top-screen"';
-                    echo 'style="background-image: url(' . get_theme_file_uri("/assets/projects/" . $proj2[$i]['img']) . ');">';
+                    echo 'style="background-image: url(' . get_theme_mod('project_image_'. ($i+1),get_theme_file_uri("/assets/projects/" . $proj[$i]['img'])) . ');">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="laptop-bottom"></div>';
@@ -115,7 +131,8 @@
             </div>
 
             <div class="row projects-button ">
-                <a href="#" class="black-btn projects-button-btn">More Projects</a>
+                <a href="<?php echo get_theme_mod('project_button_url',''); ?>" class="black-btn projects-button-btn">
+                <?php echo get_theme_mod('project_button_text','More Projects');?> </a>
             </div>
         </div>
     </section>
@@ -127,10 +144,12 @@
             </div>
             <div class="row">
                 <?php
-                $services[0] = array('svg' => 'Blueprint-Icon.svg', 'title' => 'Bluepints', 'content' => 'Create the foundation for your idea', 'button' => 'discover blueprints');
-                $services[1] = array('svg' => 'Creative-icon.svg', 'title' => 'Creative services', 'content' => 'Design, branding, marketing & copy writing', 'button' => 'get creative');
-                $services[2] = array('svg' => 'Implementation-icon.svg', 'title' => 'Custom development', 'content' => 'Software, websites, & mobile apps', 'button' => 'explore services');
-                $services[3] = array('svg' => 'Strategic-icon.svg', 'title' => 'Strategic consulting', 'content' => 'Project audits, planning & management', 'button' => 'view options');
+
+                //Default values
+                $services[0] = array('svg' => 'Blueprint-Icon.svg', 'name' => 'Bluepints', 'details' => 'Create the foundation for your idea', 'button' => 'discover blueprints');
+                $services[1] = array('svg' => 'Creative-icon.svg', 'name' => 'Creative services', 'details' => 'Design, branding, marketing & copy writing', 'button' => 'get creative');
+                $services[2] = array('svg' => 'Implementation-icon.svg', 'name' => 'Custom development', 'details' => 'Software, websites, & mobile apps', 'button' => 'explore services');
+                $services[3] = array('svg' => 'Strategic-icon.svg', 'name' => 'Strategic consulting', 'details' => 'Project audits, planning & management', 'button' => 'view options');
 
                 for ($i = 0; $i < count($services); $i++) {
                     if ($i % 2 == 0) {
@@ -138,14 +157,14 @@
                     }
                     echo '<div class= "col-1x2-sm">';
                     echo '<div class="service-card  cardV1">';
-                    echo '<img  class="service-card-img" src="' .
-                        get_theme_file_uri("/assets/svg/" . $services[$i]['svg']) .
-                        '"height width alt="' . $services[$i]['title'] . ' icon">';
-                    echo '<h4 class="service-card-title">' . $services[$i]['title'] . '</h4>';
-                    echo '<p class="service-card-text">' . $services[$i]['content'] . '</p>';
+                    echo '<img  class="service-card-img" src="' . get_theme_mod('service_image_'. ($i+1),
+                        get_theme_file_uri("/assets/svg/" . $services[$i]['svg'])) . '"alt=" Service "'.($i+1).'" icon">';
+                    echo '<h4 class="service-card-title">' .  get_theme_mod('service_name_'. ($i+1), $services[$i]['name']) . '</h4>';
+                    echo '<p class="service-card-text">' .  get_theme_mod('service_details_'. ($i+1), $services[$i]['details']) . '</p>';
                     echo "</div>";
                     echo '<div class="service-card-buttonn">';
-                    echo '<button class="black-btn">' . $services[$i]['button'] . '</button>';
+                    echo '<a class="black-btn" href="' . get_theme_mod('service_button_url_'. ($i+1), '') . '">'
+                     .  get_theme_mod('service_button_text_'. ($i+1),$services[$i]['button']) . '</a>';
                     echo "</div>";
                     echo "</div>";
                     if ($i % 2 == 1) {
@@ -281,4 +300,4 @@
     </section>
 
 </div>
-<?php get_footer();  ?>
+<?php get_footer();  ?></section>
