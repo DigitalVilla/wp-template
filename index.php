@@ -9,7 +9,7 @@
             </video>
         </div>
         <div class="hero-text-container">
-            <img class="hero-text-container-img bg-main" src="
+            <img class="hero-text-container-img bg-main" alt="Hero image" src="
              <?php echo get_theme_mod('banner_mobile_image', get_theme_file_uri('/assets/design/home-hero-mobile-logo.png')) ?>">
             <h1 class="hero-text-container-title title-main">
                 <?php echo get_theme_mod('banner_heading', 'Your Full-Service') ?> <br>
@@ -78,8 +78,7 @@
                         echo '</div>';
                         echo '<div class="work-card-laptop col-3x5 laptop">';
                         echo '<div class="laptop-top">';
-                        echo '<div class="laptop-top-screen"';
-                        echo 'style="background-image: url(' . get_theme_mod('work_image_'. ($i+1), get_theme_file_uri("/assets/projects/" .$work[$i]['img'])) . ');">';
+                        echo '<div class="laptop-top-screen" style="background-image: url(' . get_theme_mod('work_image_'. ($i+1), get_theme_file_uri("/assets/projects/" .$work[$i]['img'])) . ');">';
                         echo '</div>';
                         echo '</div>';
                         echo '<div class="laptop-bottom"></div>';
@@ -118,8 +117,7 @@
                     echo '</div>';
                     echo '<div class="projects-card-laptop laptop">';
                     echo '<div class="laptop-top">';
-                    echo '<div class="laptop-top-screen"';
-                    echo 'style="background-image: url(' . get_theme_mod('project_image_'. ($i+1),get_theme_file_uri("/assets/projects/" . $proj[$i]['img'])) . ');">';
+                    echo '<div class="laptop-top-screen" style="background-image: url(' . get_theme_mod('project_image_'. ($i+1),get_theme_file_uri("/assets/projects/" . $proj[$i]['img'])) . ');">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="laptop-bottom"></div>';
@@ -158,7 +156,7 @@
                     echo '<div class= "col-1x2-sm">';
                     echo '<div class="service-card  cardV1">';
                     echo '<img  class="service-card-img" src="' . get_theme_mod('service_image_'. ($i+1),
-                        get_theme_file_uri("/assets/svg/" . $services[$i]['svg'])) . '"alt=" Service "'.($i+1).'" icon">';
+                        get_theme_file_uri("/assets/svg/" . $services[$i]['svg'])) . '" alt="Service icon">';
                     echo '<h4 class="service-card-title">' .  get_theme_mod('service_name_'. ($i+1), $services[$i]['name']) . '</h4>';
                     echo '<p class="service-card-text">' .  get_theme_mod('service_details_'. ($i+1), $services[$i]['details']) . '</p>';
                     echo "</div>";
@@ -239,7 +237,7 @@
             for ($i = 0; $i < count($clients); $i++) {
                 echo '<figure class="clients-container-img">';
                 echo '<img src="' . get_theme_file_uri("/assets/clients/" . $clients[$i] . '.png') .
-                    '"alt="' . $clients[$i] . ' logo">';
+                    '" alt="' . $clients[$i] . ' logo">';
                 echo '</figure>';
             }
             ?>
@@ -300,4 +298,4 @@
     </section>
 
 </div>
-<?php get_footer();  ?></section>
+<?php get_footer();  ?>

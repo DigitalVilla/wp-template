@@ -40,10 +40,11 @@
       position: fixed;
 
 
-      & div {
+      & span {
         background-color: $color-brand2;
         height: 2px !important;
         position: absolute;
+        display: block;
         transition: all .3s;
         z-index: 2200;
         width: 3rem;

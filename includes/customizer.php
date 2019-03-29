@@ -42,7 +42,7 @@ function customize_MQ($wp_customize)
   ));
   //BUTTON URL
   $wp_customize->add_setting('banner_button_url', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('banner_button_url', array(
@@ -140,7 +140,7 @@ function customize_MQ($wp_customize)
 
     //BUTTON URL
   $wp_customize->add_setting('intro_button_url', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('intro_button_url', array(
@@ -235,7 +235,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('work_button_url_1', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('work_button_url_1', array(
@@ -289,7 +289,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('work_button_url_2', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('work_button_url_2', array(
@@ -344,7 +344,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('work_button_url_3', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('work_button_url_3', array(
@@ -376,7 +376,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('project_button_url', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('project_button_url', array(
@@ -410,7 +410,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('project_name_url_1', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('project_name_url_1', array(
@@ -454,7 +454,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('project_name_url_2', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('project_name_url_2', array(
@@ -536,7 +536,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('service_button_url_1', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('service_button_url_1', array(
@@ -588,7 +588,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('service_button_url_2', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('service_button_url_2', array(
@@ -640,7 +640,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('service_button_url_3', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('service_button_url_3', array(
@@ -692,7 +692,7 @@ function customize_MQ($wp_customize)
   ));
 
   $wp_customize->add_setting('service_button_url_4', array(
-    'default' => _x('Add URL', 'mobilityQ'),
+    'default' => _x('#', 'mobilityQ'),
     'type' =>  'theme_mod'
   ));
   $wp_customize->add_control('service_button_url_4', array(

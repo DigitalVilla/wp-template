@@ -4,7 +4,7 @@
 
             <div class="row footer-navbar">
                 <span class="col-1x3-md  footer-navbar-brand">
-                    <img src="<?php echo get_theme_file_uri('/assets/svg/MQfull-logoWhite.svg') ?>" class="intro-banner-img  bg-main" height width alt="Mobility Quotient Logo">
+                    <img src="<?php echo get_theme_file_uri('/assets/svg/MQfull-logoWhite.svg') ?>" class="intro-banner-img  bg-main"  alt="Mobility Quotient Logo">
                 </span>
 
                 <div class="col-2x3-md  footer-navbar-links">
@@ -43,8 +43,8 @@
 
                 for ($i = 0; $i < count($social); $i++) {
                     echo '<div class="col-1x4-xs footer-social-icons-container">';
-                    echo '<a href="' . $social[$i]['link']  . '" alt="' . $social[$i]['name'] . '-icon" target="_blank">';
-                    echo '<img src="' . $social[$i]['image']  . '" alt="' . $social[$i]['name'] . '-icon"  height width class="social-icon">';
+                    echo '<a href="' . $social[$i]['link']  . '" target="_blank">';
+                    echo '<img src="' . $social[$i]['image']  . '" alt="' . $social[$i]['name'] . '-icon"   class="social-icon">';
                     echo '</a>';
                     echo '</div>';
                 }
