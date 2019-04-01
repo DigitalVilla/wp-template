@@ -138,7 +138,7 @@
     <section class="service">
         <div class="grid">
             <div class="row">
-                <h2 class="service-title hero-tileV1"> What we do</h2>
+                <h2 class="service-title hero-tileV1"> <?php echo get_theme_mod('services_header','What we do'); ?> </h2>
             </div>
             <div class="row">
                 <?php
@@ -179,20 +179,23 @@
             <div class="swiper-container-comments">
                 <div class="swiper-wrapper">
                     <?php
+
+                    //Default Values
+
                     $comments[0] = array(
-                        'img' => 'HaleGlobal.png', 'title' => 'Bruce Hill', 'subtitle' => 'Managing Partner',
+                        'logo' => 'HaleGlobal.png', 'name' => 'Bruce Hill', 'title' => 'Managing Partner',
                         'comment' => 'Nick personally led the project, including managing the interaction with the customer, a large multinational petrochemical company.  This resulted in a unique value-added solution, driving a multi-million dollar long-term contract that secured the business through the end of the decade.  It is this ability not only to execute the project, but to define and refine the elements that create real ROI for the customer, that sets Mobility Quotient apart.'
                     );
                     $comments[1] = array(
-                        'img' => 'winsight.png', 'title' => 'Tara Tesimu', 'subtitle' => 'Chief Digital Officer',
+                        'logo' => 'winsight.png', 'name' => 'Tara Tesimu', 'title' => 'Chief Digital Officer',
                         'comment' => 'Restaurant Business Online just won BEST WEBSITE at the 2018 Neal Awards (big in B2B); this is huge!!! MQ’s contributions were instrumental in building this website — I would put it up against any site out there, big players or small!'
                     );
                     $comments[2] = array(
-                        'img' => 'Aol.png', 'title' => 'Tim Armstrong', 'subtitle' => 'CEO',
+                        'logo' => 'Aol.png', 'name' => 'Tim Armstrong', 'title' => 'CEO',
                         'comment' => 'Excerpt from the Wallstreet Journal regarding the Patch.com rebuild: "They\'ve been excellent operators and innovated and rebuilt the platform", Mr. Armstrong said, adding, "The local marketplace remains a big opportunity. AOL is supportive of Patch and it\'s something we are excited about."'
                     );
                     $comments[3] = array(
-                        'img' => 'patch.png', 'title' => 'VP Productions', 'subtitle' => '',
+                        'logo' => 'patch.png', 'name' => 'VP Productions', 'title' => '',
                         'comment' => 'I am having so much fun working on this project with MQ. It’s really really exciting to get to take a concept I’ve had for years and watch a team with so much talent and passion bring it to life. Honestly. The time of my life.'
                     );
 
@@ -201,7 +204,7 @@
                         echo '<div class="row quote-content">';
                         echo '<div class="quote-content-tag quote-left col-1x6"></div>';
                         echo '<div class="quote-content-text col-4x6-md ">';
-                        echo '<blockquote class="quote-content-text-quote Quote-V2">' . $comments[$i]['comment'] . '</blockquote>';
+                        echo '<blockquote class="quote-content-text-quote Quote-V2">' .  get_theme_mod('comment_text_'.($i+1), $comments[$i]['comment']) . '</blockquote>';
                         echo '</div>';
                         echo '<div class="quote-content-tag quote-right col-1x6"></div>';
                         echo '</div>';
@@ -209,13 +212,13 @@
                         echo '<div class="row quote-by">';
                         echo '<div class="quote-by-logo col-1x1">';
                         echo '<img  class="quote-tag-img" src="' .
-                            get_theme_file_uri("/assets/comments/" . $comments[$i]['img']) .
+                             get_theme_mod('comment_logo_'.($i+1), get_theme_file_uri("/assets/comments/". $comments[$i]['logo'])) .
                             '" alt="company logo">';
                         echo '</div>';
 
                         echo '<div class="quote-by-author  col-1x1">';
-                        echo '<h6 class="Quote-V1">' .  $comments[$i]['title'] . '</h6>';
-                        echo '<h3 class="Quote-V1">' .  $comments[$i]['subtitle'] . '</h3>';
+                        echo '<h6 class="Quote-V1">' .  get_theme_mod('comment_name_'.($i+1),$comments[$i]['name']) . '</h6>';
+                        echo '<h3 class="Quote-V1">' .  get_theme_mod('comment_title_'.($i+1),$comments[$i]['title']) . '</h3>';
                         echo '</div>';
                         echo '</div>';
                         echo "</div>";
@@ -228,7 +231,7 @@
     </section>
 
     <section class="clients grid">
-        <h2 class="clients-title hero-tileV1">Select Clients</h2>
+        <h2 class="clients-title hero-tileV1"><?php echo get_theme_mod('clients_header','Select Clients'); ?> </h2>
 
         <div class="clients-container">
             <?php
@@ -236,18 +239,18 @@
 
             for ($i = 0; $i < count($clients); $i++) {
                 echo '<figure class="clients-container-img">';
-                echo '<img src="' . get_theme_file_uri("/assets/clients/" . $clients[$i] . '.png') .
-                    '" alt="' . $clients[$i] . ' logo">';
+                echo '<img src="' .  get_theme_mod('client_image_'.($i+1),get_theme_file_uri("/assets/clients/" . $clients[$i] . '.png')) .
+                    '" alt="Client logo">';
                 echo '</figure>';
             }
             ?>
         </div>
     </section>
 
-    <section class="transform" style="background-image: url(<?php echo get_theme_file_uri('/assets/design/c_action_bg.jpg') ?>);">
-        <h2 class="transform-title hero-tileV2">Transform your brand with</h2>
+    <section class="transform" style="background-image: url(<?php echo get_theme_mod('contact_bg_image',get_theme_file_uri('/assets/design/c_action_bg.jpg')) ?>);">
+        <h2 class="transform-title hero-tileV2"><?php echo get_theme_mod('contact_header','Transform Your Brand With'); ?></h2>
 
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="transform-svg" x="0px" y="0px" viewBox="0 0 207.3 106.3" style="enable-background:new 0 0 207.3 106.3;" xml:space="preserve" width="100%" height="100%">
+          <svg id="MQ-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="transform-svg" x="0px" y="0px" viewBox="0 0 207.3 106.3" style="enable-background:new 0 0 207.3 106.3;" xml:space="preserve" width="100%" height="100%">
             <style type="text/css">
                 .st0 {
                     fill: #FFFFFF;
@@ -278,24 +281,25 @@
             </g>
         </svg>
 
-        <button class="black-btn">Free consultation</button>
+    <a href="<?php echo get_theme_mod('contact_button_url','#'); ?>" class="black-btn">
+        <?php echo get_theme_mod('contact_button','Fr1ee Consultation'); ?>
+    </a>
     </section>
 
     <section class="membership grid">
         <div class="row membership-title">
-            <h2 class="clients-title hero-tileV1">Proud Member</h2>
+            <h2 class="clients-title hero-tileV1"><?php echo get_theme_mod('badges_header','Proud Member'); ?></h2>
         </div>
-
         <div class="row membership-container">
-            <div class="col-1x2-sm membership-badge">
-                <img class="membership-badge-img " src="<?php echo get_theme_file_uri('/assets/design/c_chamber_logo.jpg') ?>" alt="Calgary Chamber">
-            </div>
-
-            <div class="col-1x2-sm membership-badge">
-                <img class="membership-badge-img" src="<?php echo get_theme_file_uri('/assets/design/made_calgary_logo.jpg') ?>" alt="Made in Calgary">
-            </div>
+            <?php
+            $badges = array('c_chamber_logo.jpg', 'made_calgary_logo.jpg');
+            for ($i = 0; $i < count($badges); $i++) {
+                    echo '<div class="col-1x2-sm membership-badge"> ';
+                    echo '<img class="membership-badge-img " src="'.get_theme_mod('badge_image_'.($i+1), get_theme_file_uri('/assets/design/c_chamber_logo.jpg')).'" alt="Calgary Chamber">';
+                    echo '</div>';
+            }
+            ?>
         </div>
     </section>
-
 </div>
 <?php get_footer();  ?>

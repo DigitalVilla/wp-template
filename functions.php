@@ -27,6 +27,6 @@ function mq_features()
 
 add_action("wp_enqueue_scripts", "mq_files");
 add_action("after_setup_theme", "mq_features");
-require get_template_directory() . '/includes/customizer.php';
+require get_template_directory() . '/inc/customizer.php';
 
  ?>

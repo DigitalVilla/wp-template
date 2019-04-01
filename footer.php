@@ -18,20 +18,40 @@
             </div>
 
             <div class="row footer-contact">
-                <?php
-                $contact[0] = array('title' => 'Office', 'content' => 'Suite 1720, 144 4th Ave <br>South West<br>Calgary, AB T2P 3N4<br>Canada');
-                $contact[1] = array('title' => 'Contact', 'content' => '<a class="footer-phone-number" href="tel:18334627567">+1 (833) GO-ASK-MQ</a><br><a href="mailto:inquiries@askmq.com">inquiries@askmq.com</a>');
-                $contact[2] = array('title' => 'Hours', 'content' => 'Monday to Friday<br>9:00 am - 5:00 pm');
+                    <div class="col-1x3-md footer-contact-info">
+                        <div class="footer-contact-info-text">
+                            <h3> <?php echo get_theme_mod('footer_address_place') ?> </h3>
+                            <p>
+                                <?php echo get_theme_mod('footer_address_street') ?><br>
+                                <?php if (get_theme_mod('footer_address_street2')) {
+                                    echo get_theme_mod('footer_address_street2');
+                                    echo '<br>';
+                                }?>
+                                <?php echo get_theme_mod('footer_address_city') ?><br>
+                                <?php echo get_theme_mod('footer_address_country') ?>
+                            </p>
+                        </div>
+                    </div>
 
-                for ($i = 0; $i < count($contact); $i++) {
-                    echo '<div class="col-1x3-md footer-contact-info">';
-                    echo '<div class="footer-contact-info-text">';
-                    echo '<h3>' . $contact[$i]['title'] . '</h3>';
-                    echo '<p>' . $contact[$i]['content'] . '</p>';
-                    echo '</div>';
-                    echo '</div>';
-                }
-                ?>
+                    <div class="col-1x3-md footer-contact-info">
+                        <div class="footer-contact-info-text">
+                            <h3> <?php echo get_theme_mod('footer_contact_title') ?> </h3>
+                            <p>
+                                <?php echo get_theme_mod('footer_contact_phone') ?><br>
+                                <?php echo get_theme_mod('footer_contact_email') ?><br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1x3-md footer-contact-info">
+                        <div class="footer-contact-info-text">
+                            <h3> <?php echo get_theme_mod('footer_hours_title') ?> </h3>
+                            <p>
+                                <?php echo get_theme_mod('footer_hours_days') ?><br>
+                                <?php echo get_theme_mod('footer_hours_hours') ?><br>
+                            </p>
+                        </div>
+                    </div>
             </div>
 
             <div class="row footer-social-icons">
@@ -58,7 +78,8 @@
             <div class="row">
                 <div class="col-1x1 footer-bottom-bar">
                     <span class="footer-copyright-text">
-                        &copy; 2019 <?php  bloginfo('name') ?> <span class="all-rights-reserved">All rights reserved.</span>
+                     <?php echo get_theme_mod('footer_rights') ?>
+
                     </span>
                 </div>
             </div>
